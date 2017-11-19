@@ -1,3 +1,4 @@
+package studenci;
 import java.util.Comparator;
 
 public class NrAlbumuComparator implements Comparator<Student>

@@ -1,3 +1,4 @@
+package studenci;
 import java.util.Comparator;
 
 public class SredniaComparator implements Comparator<Student> {

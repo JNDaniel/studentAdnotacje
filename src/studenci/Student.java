@@ -1,3 +1,4 @@
+package studenci;
 import org.jetbrains.annotations.NotNull;
 
 import java.text.DecimalFormat;
