@@ -1,3 +1,4 @@
+package studenci;
 import java.util.Comparator;
 
 public class NameComparator implements Comparator<Student> {
@@ -15,4 +16,3 @@ public class NameComparator implements Comparator<Student> {
         }
     }
 }
-git

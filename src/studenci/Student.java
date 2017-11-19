@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
 @DefaultComparator
-public class Student
+public class Student implements Comparable<Student>
 {
     private int numerAlbumu;
     private String imie;
@@ -28,7 +28,7 @@ public class Student
            return (Comparator<Student>) comp.newInstance();
         }
 
-        return (Comparator<Student>) comp.newInstance();
+        return (Comparator<Student>) Class.forName("studenci.NameComparator").newInstance();
     }
     public int getNumerAlbumu() {
         return numerAlbumu;
@@ -91,15 +91,15 @@ public class Student
                         System.lineSeparator();
         return temp;
     }
-    //@Override
-   // public int compareTo(Student o) {
-    //    if(this.nazwisko.compareToIgnoreCase(o.nazwisko)==0)
-    //    {
-     //       return this.imie.compareToIgnoreCase(o.imie);
-      //  }
-      //  else
-      //  {
-      //      return this.nazwisko.compareToIgnoreCase(o.nazwisko);
-       // }
-    //}
+    @Override
+     public int compareTo(Student o) {
+        if(this.nazwisko.compareToIgnoreCase(o.nazwisko)==0)
+        {
+            return this.imie.compareToIgnoreCase(o.imie);
+        }
+        else
+        {
+            return this.nazwisko.compareToIgnoreCase(o.nazwisko);
+        }
+    }
 }

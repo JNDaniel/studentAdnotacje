@@ -7,7 +7,5 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 public @interface DefaultComparator {
-    String compareMethod() default "NameComparator.class";
-
-
+    String compareMethod() default "studenci.NameComparator";
 }
